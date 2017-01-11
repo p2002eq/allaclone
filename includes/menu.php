@@ -51,10 +51,6 @@
 	print "<tr><td class='menuh' nowrap='1'>Trade skills...</td></tr>\n";
 	print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."recipes.php'>Recipe Search</a></li></td></tr>\n";
 
-	// Strategy section
-	print "<tr><td class='menuh' nowrap='1'>Strategy...</td></tr>\n";
-	print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."strategy/melee.php'>Melee Damage Calculator</a></li></td></tr>\n";
-
 	// Quests section
 	if($AllowQuestsNPC)
 	{
