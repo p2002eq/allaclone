@@ -394,12 +394,10 @@
 	}
 	// factions
 	$query="SELECT $tbfactionlist.name,
-			$tbfactionlist.id,
-			$tbnpcfactionentries.value
+			$tbfactionlist.id
 			FROM $tbfactionlist,$tbnpcfactionentries
 			WHERE $tbnpcfactionentries.npc_faction_id=".$npc["npc_faction_id"]."
 			AND $tbnpcfactionentries.faction_id=$tbfactionlist.id
-			AND $tbnpcfactionentries.value<0
 			GROUP BY $tbfactionlist.id";
 	$result=mysql_query($query) or message_die('npc.php','MYSQL_QUERY',$query,mysql_error());
 	if (mysql_num_rows($result)>0)
@@ -407,17 +405,15 @@
 		print "<p><b>Killing this NPC lowers factions with : </b><ul>";
 		while ($row=mysql_fetch_array($result))
 		{
-			print "<li><a href=faction.php?id=".$row["id"].">".$row["name"]."</a> (".$row["value"].")"; 
+			print "<li><a href=faction.php?id=".$row["id"].">".$row["name"]."</a>"; 
 		}
 	}
 	print "</ul>";
 	$query="SELECT $tbfactionlist.name,
-			$tbfactionlist.id,
-			$tbnpcfactionentries.value
+			$tbfactionlist.id
 			FROM $tbfactionlist,$tbnpcfactionentries
 			WHERE $tbnpcfactionentries.npc_faction_id=".$npc["npc_faction_id"]."
 			AND $tbnpcfactionentries.faction_id=$tbfactionlist.id
-			AND $tbnpcfactionentries.value>0
 			GROUP BY $tbfactionlist.id";
 	$result=mysql_query($query) or message_die('npc.php','MYSQL_QUERY',$query,mysql_error());
 	if (mysql_num_rows($result)>0)
@@ -425,7 +421,7 @@
 		print "<p><b>Killing this NPC raises factions with : </b><ul>";
 		while ($row=mysql_fetch_array($result))
 		{
-			print "<li><a href=faction.php?id=".$row["id"].">".$row["name"]."</a> (".$row["value"].")"; 
+			print "<li><a href=faction.php?id=".$row["id"].">".$row["name"]."</a>"; 
 		}
 	}
 	print "</ul>";

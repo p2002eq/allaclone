@@ -5,7 +5,7 @@
 	// Main section
 	print "<tr><td class='menuh' nowrap='1'>Main...</td></tr>\n";
 	print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."index.php'>AllaClone Main Page</a></li></td></tr>\n";
-	print "<tr><td nowrap='1' class='menu_item'><li><a href='http://www.eqemulator.org'>EQEmulator</a></li></td></tr>\n";
+	print "<tr><td nowrap='1' class='menu_item'><li><a href='http://www.p2002.com'>P2002 Home Page</a></li></td></tr>\n";
 	if($EnableNews)
 	{
 		print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."news.php'>Server News</a></li></td></tr>\n";
@@ -25,7 +25,7 @@
 	}
 	else
 	{
-		print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."zones.php'>Populated Zones</a></li></td></tr>\n";
+		print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."zones.php'>Zones Alphabetically</a></li></td></tr>\n";
 		print "<tr><td nowrap='1' class='menu_item'><li><a href='".$root_url."zoneslevels.php'>Zones by Level</a></li></td></tr>\n";
 	}
 	// Items section
