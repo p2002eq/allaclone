@@ -367,11 +367,10 @@
 				{
 					print "</ul>\n";
 				}
-				print "<b><a href='zone.php?name=".$row["short_name"]."'>".$row["long_name"]."</a> at: </b>\n";
+				print "<b><a href='zone.php?name=".$row["short_name"]."'>".$row["long_name"];
 				print "<ul>\n";
 				$CurrentZone = $row["short_name"];
 			}
-			print "<li>".$row["max_y"]." (Y), ".$row["max_x"]." (X), ".$row["max_z"]." (Z)</a></li>";
 		}
 		print "</ul>\n";
 		print "</td>\n";
