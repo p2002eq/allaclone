@@ -131,7 +131,8 @@ if ($mode=="items") {
 	$query.=" WHERE $tbspawn2.zone='$name'
 		AND $tbspawnentry.spawngroupID=$tbspawn2.spawngroupID
 		AND $tbspawnentry.npcID=$tbnpctypes.id
-		AND $tbspawngroup.id=$tbspawnentry.spawngroupID";
+		AND $tbspawngroup.id=$tbspawnentry.spawngroupID
+		AND $tbnpctypes.loottable_id !=0";
     
 	if ($MerchantsDontDropStuff==TRUE)
 	{
